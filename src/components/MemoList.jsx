@@ -3,7 +3,7 @@ import { View, Text, StyleSheet } from 'react-native';
 
 export default function MemoList() {
   return (
-      <View>
+    <View>
       <View style={styles.memoListItem}>
         <View>
           <Text style={styles.memoListItemTitle}>買い物リスト</Text>
@@ -57,6 +57,6 @@ const styles = StyleSheet.create({
   memoListItemDate: {
     fontSize: 12,
     lineHeight: 16,
-    color: '848484',
+    color: '#848484',
   },
-})
+});
