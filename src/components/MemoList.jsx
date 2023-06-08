@@ -1,4 +1,4 @@
-import { AntDesign } from "@expo/vector-icons";
+import { AntDesign } from '@expo/vector-icons';
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 
@@ -21,7 +21,7 @@ export default function MemoList() {
           <Text style={styles.memoListItemDate}>2023年６月３日 10:00</Text>
         </View>
         <View>
-          <AntDesign name="close" size={16} color="#BOBOBO" />
+          <AntDesign name="close" size={16} color="black" />
         </View>
       </View>
 
