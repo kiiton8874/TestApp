@@ -1,41 +1,58 @@
 import { AntDesign } from '@expo/vector-icons';
 import React from 'react';
 import {
-  View, Text, StyleSheet, TouchableOpacity,
+  View, Text, StyleSheet, TouchableOpacity, Alert,
 } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 export default function MemoList() {
+  const navigation = useNavigation();
   return (
     <View>
-      <View style={styles.memoListItem}>
+      <TouchableOpacity
+        style={styles.memoListItem}
+        onPress={() => { navigation.navigate('MemoDetail'); }}
+      >
         <View>
           <Text style={styles.memoListItemTitle}>買い物リスト</Text>
           <Text style={styles.memoListItemDate}>2023年６月３日 10:00</Text>
         </View>
-        <TouchableOpacity>
+        <TouchableOpacity
+          style={styles.memoDelete}
+          onPress={() => { Alert.alert('Are you sure?'); }}>
           <AntDesign name="close" size={16} color="#BOBOBO" />
         </TouchableOpacity>
-      </View>
+      </TouchableOpacity>
 
-      <View style={styles.memoListItem}>
+      <TouchableOpacity
+        style={styles.memoListItem}
+        onPress={() => { navigation.navigate('MemoDetail'); }}
+      >
         <View>
           <Text style={styles.memoListItemTitle}>買い物リスト</Text>
           <Text style={styles.memoListItemDate}>2023年６月３日 10:00</Text>
         </View>
-        <TouchableOpacity>
-          <AntDesign name="close" size={16} color="black" />
-        </TouchableOpacity>
-      </View>
-
-      <View style={styles.memoListItem}>
-        <View>
-          <Text style={styles.memoListItemTitle}>買い物リスト</Text>
-          <Text style={styles.memoListItemDate}>2023年６月３日 10:00</Text>
-        </View>
-        <TouchableOpacity>
+        <TouchableOpacity
+          style={styles.memoDelete}
+          onPress={() => { Alert.alert('Are you sure?'); }}>
           <AntDesign name="close" size={16} color="#BOBOBO" />
         </TouchableOpacity>
-      </View>
+      </TouchableOpacity>
+
+      <TouchableOpacity
+        style={styles.memoListItem}
+        onPress={() => { navigation.navigate('MemoDetail'); }}
+      >
+        <View>
+          <Text style={styles.memoListItemTitle}>買い物リスト</Text>
+          <Text style={styles.memoListItemDate}>2023年６月３日 10:00</Text>
+        </View>
+        <TouchableOpacity
+          style={styles.memoDelete}
+          onPress={() => { Alert.alert('Are you sure?'); }}>
+          <AntDesign name="close" size={16} color="#BOBOBO" />
+        </TouchableOpacity>
+      </TouchableOpacity>
     </View>
   );
 }
@@ -61,5 +78,8 @@ const styles = StyleSheet.create({
     fontSize: 12,
     lineHeight: 16,
     color: '#848484',
+  },
+  memoDelete: {
+    padding: 8,
   },
 });
