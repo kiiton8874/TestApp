@@ -19,7 +19,8 @@ export default function MemoList() {
         </View>
         <TouchableOpacity
           style={styles.memoDelete}
-          onPress={() => { Alert.alert('Are you sure?'); }}>
+          onPress={() => { Alert.alert('Are you sure?'); }}
+        >
           <AntDesign name="close" size={16} color="#BOBOBO" />
         </TouchableOpacity>
       </TouchableOpacity>
